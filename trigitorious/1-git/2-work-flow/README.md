@@ -7,4 +7,4 @@ Workflow
 * 基于功能定义分支
 * 定义实验性分支
 
-![branching](http://raw.github.com/layerssss/myslides/trigitorious/1-git/2-work-flow/branching.png)
+![branching](https://github.com/layerssss/myslides/raw/master/trigitorious/1-git/2-work-flow/branching%2Cpng)
