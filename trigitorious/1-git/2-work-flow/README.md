@@ -1,10 +1,7 @@
 Workflow
-==========================
+====================
 
-利用git自由的分支，我们这样做：
+* 所有的分布式都是相对的
+* git可以按照传统的集中式工作流进行使用(从远程分支merge)
 
-* 基于角色定义分支
-* 基于功能定义分支
-* 定义实验性分支
-
-![branching](https://github.com/layerssss/myslides/raw/master/trigitorious/1-git/2-work-flow/branching%2Cpng)
+![centralized-workflow](https://github.com/layerssss/myslides/raw/master/trigitorious/1-git/2-work-flow/centralized-workflow.png)
