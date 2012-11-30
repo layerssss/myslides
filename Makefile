@@ -11,6 +11,7 @@ all:
 
 build:
 	rm -R -f out/*
+	jade index.jade --out out
 	make $(SLIDES) --always-make
 
 
