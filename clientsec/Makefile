@@ -1,2 +1,0 @@
-all:
-	markem --out out
