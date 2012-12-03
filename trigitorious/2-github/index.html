@@ -1,19 +1,73 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Github</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="DESCRIPTION"><meta name="keywords" content="KEYWORDS"><meta name="author" content="AUTHOR"><link rel="stylesheet" href="../../css/bootstrap.css"><style>body {
-  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-}
-#github{
-  z-index:10000;
-  position:fixed;
-  left:0;
-  top:0;
-}</style><link rel="stylesheet" href="../../css/bootstrap-responsive.css"></head><body><div class="navbar navbar-inverse navbar-fixed-top"><div class="navbar-inner"><div class="container"><a data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a href="../../" class="brand">Hello</a><div class="nav-collapse collapse"><ul class="nav"><li><a href="../../jadeless/">jadeless</a></li><li><a href="../../clientsec/">WEB前端安全原理介绍和演示：XSS与CSRF</a></li><li><a href="../../trigitorious/">Git &amp; Github &amp; pansafe.github.com</a></li></ul></div></div></div></div><div class="container"><artical><h1>Github</h1>
+<!DOCTYPE html><html></html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=1024, user-scalable=no"><title>Github</title><!--<Required>stylesheet </Required>--><link rel="stylesheet" href="../core/deck.core.css"><!--<Extension>CSS files go here. Remove or add as needed. </Extension>--><link rel="stylesheet" href="../extensions/goto/deck.goto.css"><link rel="stylesheet" href="../extensions/menu/deck.menu.css"><link rel="stylesheet" href="../extensions/navigation/deck.navigation.css"><link rel="stylesheet" href="../extensions/status/deck.status.css"><link rel="stylesheet" href="../extensions/hash/deck.hash.css"><link rel="stylesheet" href="../extensions/scale/deck.scale.css"><!--<Style>theme. More available in /themes/style/ or create your own. </Style>--><link rel="stylesheet" href="../themes/style/swiss.css"><!--<Transition>theme. More available in /themes/transition/ or create your own. </Transition>--><link rel="stylesheet" href="../themes/transition/horizontal-slide.css"><!--<Required>Modernizr file </Required>--><script src="../modernizr.custom.js"></script></head><body class="deck-container"><!--<Begin>slides. Just make elements with a class of slide. </Begin>--><section class="slide"><h2>Github</h2><div>
 <ul>
-<li>Github是一个git托管服务+一些其他的小玩意儿</li>
-<li>Github于2008年4月启动</li>
-<li><a href="https://github.com/plans">公共免费，私有收费</a></li>
-<li>Github上线第一年积累了46,000个公共代码仓库</li>
-<li>2012年9月,Github托管了3,700,000个代码仓库</li>
-<li>2012年7月,Github进行A轮融资，获得了$100,000,000</li>
-<li>Github目前大约有128个员工（<a href="https://github.com/github">GitHub on Github</a>）</li>
+<li class="slide">Github是一个git托管服务+一些其他的小玩意儿</li>
+<li class="slide">Github于2008年4月启动</li>
+<li class="slide"><a href="https://github.com/plans">公共免费，私有收费</a></li>
+<li class="slide">Github上线第一年积累了46,000个公共代码仓库</li>
+<li class="slide">2012年9月,Github托管了3,700,000个代码仓库</li>
+<li class="slide">2012年7月,Github进行A轮融资，获得了$100,000,000</li>
+<li class="slide">Github目前大约有128个员工（<a href="https://github.com/github">GitHub on Github</a>）</li>
 </ul>
-</artical><p><a href="../../trigitorious/2-github/1-only-git.html">git-only</a></p><p><a href="../../trigitorious/2-github/2-fork-pr-merge-model.html">Fork-PR-Merge模型</a></p><p><a href="../../trigitorious/2-github/3-fork-pr-merge-workflow.html">Fork-PR-Merge模型</a></p><p><a href="../../trigitorious/2-github/4-code-review.html">代码评审</a></p><p><a href="../../trigitorious/2-github/5-social-network.html">迷你社交网络</a></p><p><a href="../../trigitorious/2-github/6-no-more-cli.html">No More CLI</a></p><p><a href="../../trigitorious/2-github/7-github-page.html">Github Pages</a></p><p><a href="../../trigitorious/2-github/8-octocat.html">Octocat</a></p><p><a href="../../trigitorious/2-github/9-repo-do-not-have-to-be-proj.html">不仅程序员可以用</a></p><footer><p>© 2012  YOURNAME</p></footer></div><script src="../../js/jquery.js"></script><script src="../../js/bootstrap.js"></script><script src="../../js/modernizr.js"></script><a id="github" href="https://github.com/layerssss/markem/blob/master/trigitorious/2-github/README.md"><img src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a></body></html>
+</div></section><section class="slide"><h2>git-only</h2><div>
+<ul>
+<li class="slide"><a href="http://en.wikipedia.org/wiki/Comparison_of_open_source_software_hosting_facilities#Available_version_control_systems">和其他开源托管服务相比</a>, Github只支持git</li>
+</ul>
+</div></section><section class="slide"><h2>Fork-PR-Merge模型</h2><div>
+<p><img src="https://github.com/layerssss/myslides/raw/master/trigitorious/2-github/fork-you.jpg" alt="fork-you"></p>
+</div></section><section class="slide"><h2>Fork-PR-Merge模型</h2><div>
+<p><img src="https://github.com/layerssss/myslides/raw/master/trigitorious/2-github/fork-workflow.png" alt="fork-workflow">
+
+</p>
+<ul>
+<li class="slide">我不能改你，但是我能fork你</li>
+<li class="slide">一个fork项目没有Issues模块，只能在进行PR(Push Request)时向主项目提交一个Issue</li>
+<li class="slide">More forks, more fun.</li>
+<li class="slide">比如说这个Issue:<a href="https://github.com/defunkt/jquery-pjax/issues/17">defunkt/jquery-pjax/issues/17</a></li>
+</ul>
+</div></section><section class="slide"><h2>代码评审</h2><div>
+<ul>
+<li class="slide">可以对commit中的某行代码做评论</li>
+<li class="slide">可以<a href="https://github.com/cameronmcefee/Image-Diff-View-Modes/commit/8e95f70c9c47168305970e91021072673d7cdad8?diff-0=2-0&amp;diff-1=1-0&amp;diff-2=3-1&amp;diff-3=2-100">对图片进行diff</a></li>
+<li class="slide">Github支持渲染许多<strong>程序员</strong>味文档,例如：常用图片,markdown,asciidoc,textile,rdoc等。</li>
+<li class="slide"><a href="https://github.com/visionmedia/jade#readme">README驱动开发！</a></li>
+</ul>
+</div></section><section class="slide"><h2>迷你社交网络</h2><div>
+<ul>
+<li class="slide">社交编程</li>
+<li class="slide">组织账号</li>
+</ul>
+</div></section><section class="slide"><h2>No More CLI</h2><div>
+<ul>
+<li class="slide">CLI=Command line interface</li>
+<li class="slide">GUI for Windows/Mac/Eclipse</li>
+<li class="slide">Issues GUI for Android/iOS</li>
+<li class="slide">CLI，键宗，设计师</li>
+</ul>
+</div></section><section class="slide"><h2>Github Pages</h2><div>
+<ul>
+<li class="slide">为用户/组织/项目创建主页</li>
+<li class="slide">手动创建你的主页</li>
+<li class="slide">Github提供的Pages Generator</li>
+<li class="slide">使用Jekyll</li>
+<li class="slide">【广告时间】markem</li>
+</ul>
+</div></section><section class="slide"><h2>Octocat</h2><div>
+<p><img src="https://github.com/layerssss/myslides/raw/master/trigitorious/2-github/octocat.jpg" alt="octocat"></p>
+</div></section><section class="slide"><h2>不仅程序员可以用</h2><div>
+<p>Github还可以用来
+
+</p>
+<ul>
+<li class="slide"><a href="https://github.com/supervanship/SakuraCafeSubs">发布字幕</a></li>
+<li class="slide"><a href="https://github.com/karlseguin/the-little-mongodb-book">写书</a></li>
+<li class="slide"><a href="https://github.com/codylindley/frontend-tools">分享开发工具</a></li>
+<li class="slide"><a href="https://github.com/dasllama/Minecraft-Savegames">同步游戏存档</a></li>
+<li class="slide"><a href="https://github.com/bundestag/gesetze">立法</a></li>
+<li class="slide"><a href="https://github.com/layerssss/myslides">存放幻灯片</a></li>
+<li class="slide">然后，还有..</li>
+<li class="slide"><a href="https://github.com/norinori2222/boyfriend_require/blob/master/README-en.md">征男/女友</a></li>
+<li class="slide"><a href="https://github.com/msporny/dna">储存自己的DNA...</a></li>
+</ul>
+</div></section><section class="slide"><h2>More..</h2><ul><li><a href="../">[../]Git &amp; Github &amp; pansafe.github.com</a></li></ul></section><!--<End>slides. </End>--><!--<Begin>extension snippets. Add or remove as needed. </Begin>--><!--<deck class="navigation">snippet </deck>--><a href="#" title="Previous" class="deck-prev-link">←</a><a href="#" title="Next" class="deck-next-link">→</a><!--<deck class="status">snippet </deck>--><p class="deck-status"><span class="deck-status-current"></span>/<span class="deck-status-total"></span></p><!--<deck class="goto">snippet </deck>--><form action="." method="get" class="goto-form"><label for="goto-slide">Go to slide:</label><input id="goto-slide" type="text" name="slidenum" list="goto-datalist"><datalist id="goto-datalist"></datalist><input type="submit" value="Go"></form><!--<deck class="hash">snippet </deck>--><a href="." title="Permalink to this slide" class="deck-permalink">#</a><!--<End>extension snippets. </End>--><!--<Required>JS files. </Required>--><script src="../jquery-1.7.2.min.js"></script><script src="../core/deck.core.js"></script><!--<Extension>JS files. Add or remove as needed. </Extension>--><script src="../core/deck.core.js"></script><script src="../extensions/hash/deck.hash.js"></script><script src="../extensions/menu/deck.menu.js"></script><script src="../extensions/goto/deck.goto.js"></script><script src="../extensions/status/deck.status.js"></script><script src="../extensions/navigation/deck.navigation.js"></script><script src="../extensions/scale/deck.scale.js"></script><!--<Initialize>the deck. You can put this in an external file if desired. </Initialize>--><script>$(function() {
+$.deck('.slide');
+});</script></body>
