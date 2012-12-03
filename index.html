@@ -17,24 +17,25 @@
   };
 
   jsonp('https://api.github.com/repos/layerssss/myslides/contents', function(err, data) {
-    var file, _i, _len, _results;
+    var ajax, file, _i, _len, _results;
     _results = [];
     for (_i = 0, _len = data.length; _i < _len; _i++) {
       file = data[_i];
       if (file.type === 'dir') {
-        _results.push($.ajax({
+        ajax = $.ajax({
           url: "" + file.name + "/",
           success: function(data) {
             var title;
             title = (data.match(/<title>(.*)<\/title>/) || [])[1];
-            return $("<h2><a href=\"" + file.name + "/\">" + title + "</a></h2>").appendTo('body');
+            return $("<h2><a href=\"" + this.filename + "/\">" + title + "</a></h2>").appendTo('body');
           },
           error: function() {
             var title;
-            title = file.name;
-            return $("<h2><a href=\"" + file.name + "/\">" + title + "</a></h2>").appendTo('body');
+            title = this.filename;
+            return $("<h2><a href=\"" + this.filename + "/\">" + title + "</a></h2>").appendTo('body');
           }
-        }));
+        });
+        _results.push(ajax.filename = file.name);
       } else {
         _results.push(void 0);
       }
