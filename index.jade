@@ -18,12 +18,13 @@ head
         if file.type=='dir'
           ajax=$.ajax
             url:"#{file.name}/"
-            success:(data)->
+            success:(data,t,xhr)->
               title=(data.match(/<title>(.*)<\/title>/)||[])[1]
-              $("<h2><a href=\"#{this.filename}/\">#{title}</a></h2>").appendTo 'body'
-            error:()->
-              title=this.filename
-              $("<h2><a href=\"#{this.filename}/\">#{title}</a></h2>").appendTo 'body'
+              $("<h2><a href=\"#{xhr.filename}/\">#{title}</a></h2>").appendTo 'body'
+            error:(xhr)->
+              console.log this
+              title=xhr.filename
+              $("<h2><a href=\"#{xhr.filename}/\">#{title}</a></h2>").appendTo 'body'
           ajax.filename=file.name
 body
   h1 我的幻灯片
