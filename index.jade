@@ -16,13 +16,14 @@ head
     jsonp 'https://api.github.com/repos/layerssss/myslides/contents',(err,data)->
       for file in data
         if file.type=='dir'
-          $.ajax
+          ajax=$.ajax
             url:"#{file.name}/"
             success:(data)->
               title=(data.match(/<title>(.*)<\/title>/)||[])[1]
-              $("<h2><a href=\"#{file.name}/\">#{title}</a></h2>").appendTo 'body'
+              $("<h2><a href=\"#{this.filename}/\">#{title}</a></h2>").appendTo 'body'
             error:()->
-              title=file.name
-              $("<h2><a href=\"#{file.name}/\">#{title}</a></h2>").appendTo 'body'
+              title=this.filename
+              $("<h2><a href=\"#{this.filename}/\">#{title}</a></h2>").appendTo 'body'
+          ajax.filename=file.name
 body
   h1 我的幻灯片
