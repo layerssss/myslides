@@ -20,11 +20,12 @@ head
             url:"#{file.name}/"
             success:(data,t,xhr)->
               title=(data.match(/<title>(.*)<\/title>/)||[])[1]
-              $("<h2><a href=\"#{xhr.filename}/\">#{title}</a></h2>").appendTo 'body'
+              $("<h2><a href=\"#{xhr.filename}/\">#{title}</a> <a href=\"#{xhr.html_url}/\">view on Github</a></h2>").appendTo 'body'
             error:(xhr)->
               console.log this
               title=xhr.filename
-              $("<h2><a href=\"#{xhr.filename}/\">#{title}</a></h2>").appendTo 'body'
+              $("<h2>#{title} <a href=\"#{xhr.html_url}/\">view on Github</a></h2>").appendTo 'body'
           ajax.filename=file.name
+          ajax.html_url=file.html_url
 body
   h1 我的幻灯片
