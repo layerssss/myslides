@@ -24,15 +24,16 @@
       if (file.type === 'dir') {
         ajax = $.ajax({
           url: "" + file.name + "/",
-          success: function(data) {
+          success: function(data, t, xhr) {
             var title;
             title = (data.match(/<title>(.*)<\/title>/) || [])[1];
-            return $("<h2><a href=\"" + this.filename + "/\">" + title + "</a></h2>").appendTo('body');
+            return $("<h2><a href=\"" + xhr.filename + "/\">" + title + "</a></h2>").appendTo('body');
           },
-          error: function() {
+          error: function(xhr) {
             var title;
-            title = this.filename;
-            return $("<h2><a href=\"" + this.filename + "/\">" + title + "</a></h2>").appendTo('body');
+            console.log(this);
+            title = xhr.filename;
+            return $("<h2><a href=\"" + xhr.filename + "/\">" + title + "</a></h2>").appendTo('body');
           }
         });
         _results.push(ajax.filename = file.name);
